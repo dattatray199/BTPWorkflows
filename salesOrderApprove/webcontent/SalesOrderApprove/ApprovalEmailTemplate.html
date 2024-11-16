@@ -1,0 +1,26 @@
+<p>Hello ${info.startedBy},</p>
+<p><br></p>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid rgb(0, 0, 0);">
+    <tbody>
+        <tr>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">Parameter</td>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">Value</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">Sales Order</td>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">${context.SalesOrder}</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">Net Amount</td>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">${context.response.d.TotalNetAmount}</td>
+        </tr>
+        <tr>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">Currency</td>
+            <td style="width: 50%; border: 1px solid rgb(0, 0, 0);">${context.response.d.TransactionCurrency}</td>
+        </tr>
+    </tbody>
+</table>
+<p>The Sales Order ${context.SalesOrder} has been approved successfully.</p>
+<p>Regards,</p>
+<p>Sales Team</p>
+<p><br></p>

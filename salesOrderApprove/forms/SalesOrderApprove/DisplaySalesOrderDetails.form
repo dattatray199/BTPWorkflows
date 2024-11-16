@@ -1,0 +1,92 @@
+{
+    "id": "displaysalesorderdetails",
+    "schemaVersion": "1.1.0",
+    "name": "DisplaySalesOrderDetails",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "sales_order",
+            "type": "string",
+            "label": "Sales Order",
+            "readOnly": false,
+            "value": "${context.SalesOrder}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "sales_order_type",
+            "type": "string",
+            "label": "Sales Order Type",
+            "readOnly": false,
+            "value": "${context.response.d.SalesOrderType}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "sales_organization",
+            "type": "string",
+            "label": "Sales Organization",
+            "readOnly": false,
+            "value": "${context.response.d.SalesOrganization}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "distribution_channel",
+            "type": "string",
+            "label": "Distribution Channel",
+            "readOnly": false,
+            "value": "${context.response.d.DistributionChannel}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "division",
+            "type": "string",
+            "label": "Division",
+            "readOnly": false,
+            "value": "${context.response.d.OrganizationDivision}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "total_net_amount",
+            "type": "string",
+            "label": "Total Net Amount",
+            "readOnly": false,
+            "value": "${context.response.d.TotalNetAmount}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "currency",
+            "type": "string",
+            "label": "Currency",
+            "readOnly": false,
+            "value": "${context.response.d.TransactionCurrency}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
